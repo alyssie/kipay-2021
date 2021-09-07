@@ -1,0 +1,406 @@
+/*
+Theme Name: KiPay 2021
+Author: Alyssie
+Version: 1
+Author URI: https://littlealy.com/
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700;800;900&display=swap');
+
+$highlight: #ceff96;
+$primary: #AED768;
+$secondary: #304807;
+$contrast: #FF6584;
+$black: #121212;
+$dark: #0c0b0e;
+
+*{
+    font-family: 'Poppins';
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+p{
+    margin: 0;
+}
+.err{
+    color: red;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+    &:hover{
+        color: $primary;
+        text-decoration: none;
+    }
+}
+.link{
+    color: $secondary;
+}
+.opacity-half{
+    opacity: 0.5;
+}
+.c-highlight{
+    color: $highlight;
+}
+.c-primary {
+    color: $primary;
+}
+.c-secondary {
+    color: $secondary;
+}
+.c-black {
+    color: $black;
+}
+.relative{
+    position: relative;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.light {
+    font-weight: 100;
+}
+.normal {
+    font-weight: 400;
+}
+.semibold{
+    font-weight: 600;
+}
+.bold {
+    font-weight: 700;
+}
+.extrabold {
+    font-weight: 800;
+}
+.black {
+    font-weight: 900;
+}
+.t-xs {
+    font-size: 0.75rem;
+}
+.t-sm{
+    font-size: 0.875rem;
+}
+.t-md {
+    font-size: 1.25rem;
+}
+.t-lg {
+    font-size: 1.5rem;
+}
+.t-xl {
+    font-size: 2rem;
+}
+.t-xxl {
+    font-size: 3rem;
+}
+.t-xxxl {
+    font-size: 4rem;
+}
+.t-xxxxl {
+    font-size: 5rem;
+}
+.lh-1{
+    line-height: 1;
+}
+.lh-2 {
+    line-height: 1.5;
+}
+.lh-3 {
+    line-height: 2;
+}
+.ls-1 {
+    letter-spacing: 1px;
+}
+.ls-2{
+    letter-spacing: 2px;
+}
+.ellipsis{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: relative;
+}
+.form-control:focus {
+    color: #495057;
+    background-color: #ffffff;
+    border-color: $highlight;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem $secondary;
+}
+.default-btn{
+    background: $black;
+    color: #ffffff;
+    padding: 10px 20px;
+    &:hover{
+        background: $dark;
+        color: $highlight;
+        box-shadow: 0 0 0 0.2rem $highlight;
+    }
+    &:focus {
+        background: $dark;
+        color: $highlight;
+        box-shadow: 0 0 0 0.2rem $highlight;
+    }
+}
+
+.default-btn {
+    background: $black;
+    color: #ffffff;
+    padding: 10px 20px;
+
+    &:hover {
+        background: $dark;
+        color: $highlight;
+        box-shadow: 0 0 0 0.2rem $highlight;
+    }
+
+    &:focus {
+        background: $dark;
+        color: $highlight;
+        box-shadow: 0 0 0 0.2rem $highlight;
+    }
+}
+
+.main-btn {
+    background: $primary;
+    color: $dark;
+    padding: 7px 15px;
+    font-weight: 600;
+    &:hover {
+        background: $secondary;
+        color: #ffffff;
+        box-shadow: 0 0 0 0.0 $dark;
+        font-weight: 600;
+    }
+    &:focus {
+        background: $secondary;
+        color: #ffffff;
+        box-shadow: 0 0 0 0.0 $dark;
+        font-weight: 600;
+    }
+}
+
+
+.file-btn {
+    background: #3b3b3b;
+    color: #ffffff;
+    padding: 8px 22px;
+    position: absolute;
+    top: 19px !important;
+    left: 16px !important;
+    font-weight: 500;
+    font-size: 0.75rem;
+    z-index: 9;
+    border-radius: 5px 0 0 5px;
+    &:hover {
+        background: $black;
+        color: $highlight;
+        box-shadow: 0 0 0 0rem $black;
+    }
+
+    &:focus {
+        background: $black;
+        color: $highlight;
+        box-shadow: 0 0 0 0rem $black;
+    }
+}
+
+.mini-btn {
+    background: $contrast;
+    color: #ffffff;
+    padding: 5px 12px;
+    font-weight: 400;
+    border-radius: 100px;
+    &:hover {
+        background: $black;
+        color: $highlight;
+        box-shadow: 0 0 0 0rem $black;
+    }
+    &:focus {
+        background: $black;
+        color: $highlight;
+        box-shadow: 0 0 0 0rem $black;
+    }
+    &.dark{
+        background: $dark;
+    }
+}
+
+
+.buy-btn {
+    background: $primary;
+    color: $dark;
+    padding: 7px  7px;
+    display: block;
+    &:hover {
+        background: $secondary;
+        color: $highlight;
+        box-shadow: 0 0 0 0.0 $secondary;
+    }
+    &:focus {
+        background: $secondary;
+        color: $highlight;
+        box-shadow: 0 0 0 0.0 $secondary;
+    }
+}
+
+nav{
+    background: $dark;
+    // box-shadow: 0 -6px 0 7px;
+    .logo{
+        height: 45px;
+    }
+}
+
+.coin-block {
+    background: $black;
+    border-radius: 5px;
+    color: #ffffff;
+    .icon {
+        height: 85px;
+    }
+    .coin-details {
+        position: relative;
+        overflow: hidden;
+        .name {
+            font-size: 1.25rem;
+            font-weight: 400;
+        }
+        .currency {
+            font-weight: 400;
+        }
+        .available {
+            color: $primary;
+        }
+    }
+}
+
+#home-page {
+    .landing{
+        background-image: linear-gradient(90deg, $primary, #FFFFFF);
+        height: 100vh;
+        color: $black;
+    }
+    .illustration{
+        width: auto;
+        max-width: 100%;
+    }
+    .crypto-value{
+        background: $dark;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        color: #ffffff;
+    }
+    .information {
+        background: #ffffff;
+    }
+}
+
+#product-page{
+    .coin-details {
+        background-color: $black;
+        height: 300px;
+        color: #ffffff;
+        position: relative;
+        background-blend-mode: multiply;
+        background-size: 73px;
+        .circle-thumbnail {
+            background-color: $black;
+            width: 200px;
+            height: 200px;
+            border-radius: 200px;
+            position: absolute;
+            bottom: -350px;
+            .second-border {
+                background: $dark;
+                border: 1px solid $primary;
+                border-radius: 150px;
+            }
+            .icon {
+                width: 100%;
+            }
+        }
+        .description {
+            position: absolute;
+            top: 220px;
+            left: 230px;
+        }
+        .name{
+            font-size: 2.5rem;
+        }
+        .available {
+            color: $dark;
+        }
+        .price{
+            color: $dark;
+        }
+    }
+    .checkout{
+        margin-top: 95px;
+        background: #f0f2f5;
+        a{
+            color: $dark;
+            font-weight: 600;
+            &:hover{
+                color: $secondary;
+            }
+        }
+        .instructions{
+            .steps{
+                text-align: center;
+                margin-top: 10px;
+            }
+            .num-badge{
+                border: 3px solid $black;
+                background: $dark;
+                border-radius: 100px;
+                width: 50px;
+                height: 50px;
+                color: $primary;
+                font-weight: 600;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                p{
+                    font-size: 1.25rem;
+                }
+            }
+        }
+        .purchase {
+            background: $primary;
+            border-radius: 10px;
+            color: $dark;
+            .absolute-label {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                font-weight: 500;
+                font-size: 0.75rem;
+            }
+            .lg-input {
+                height: 50px;
+                border-radius: 8px;
+                border: 2px solid $secondary;
+                font-weight: 600;
+                &:focus{
+                    box-shadow: none;
+                    outline: 0;
+                }
+            }
+        }
+    }
+}
+
+#market-page{
+    background: #f0f2f5;
+    color: $dark;
+    .banner{
+        background-image: linear-gradient(90deg, $secondary, $primary);
+        margin-top: 70px;
+        color: $dark;
+    }
+}

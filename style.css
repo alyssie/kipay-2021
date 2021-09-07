@@ -1,0 +1,471 @@
+/*
+Theme Name: KiPay 2021
+Author: Alyssie
+Version: 1
+Author URI: https://littlealy.com/
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700;800;900&display=swap");
+* {
+  font-family: 'Poppins';
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+p {
+  margin: 0;
+}
+
+.err {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a:hover {
+  color: #AED768;
+  text-decoration: none;
+}
+
+.link {
+  color: #304807;
+}
+
+.opacity-half {
+  opacity: 0.5;
+}
+
+.c-highlight {
+  color: #ceff96;
+}
+
+.c-primary {
+  color: #AED768;
+}
+
+.c-secondary {
+  color: #304807;
+}
+
+.c-black {
+  color: #121212;
+}
+
+.relative {
+  position: relative;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.light {
+  font-weight: 100;
+}
+
+.normal {
+  font-weight: 400;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.extrabold {
+  font-weight: 800;
+}
+
+.black {
+  font-weight: 900;
+}
+
+.t-xs {
+  font-size: 0.75rem;
+}
+
+.t-sm {
+  font-size: 0.875rem;
+}
+
+.t-md {
+  font-size: 1.25rem;
+}
+
+.t-lg {
+  font-size: 1.5rem;
+}
+
+.t-xl {
+  font-size: 2rem;
+}
+
+.t-xxl {
+  font-size: 3rem;
+}
+
+.t-xxxl {
+  font-size: 4rem;
+}
+
+.t-xxxxl {
+  font-size: 5rem;
+}
+
+.lh-1 {
+  line-height: 1;
+}
+
+.lh-2 {
+  line-height: 1.5;
+}
+
+.lh-3 {
+  line-height: 2;
+}
+
+.ls-1 {
+  letter-spacing: 1px;
+}
+
+.ls-2 {
+  letter-spacing: 2px;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #ffffff;
+  border-color: #ceff96;
+  outline: 0;
+  box-shadow: 0 0 0 0.1rem #304807;
+}
+
+.default-btn {
+  background: #121212;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+
+.default-btn:hover {
+  background: #0c0b0e;
+  color: #ceff96;
+  box-shadow: 0 0 0 0.2rem #ceff96;
+}
+
+.default-btn:focus {
+  background: #0c0b0e;
+  color: #ceff96;
+  box-shadow: 0 0 0 0.2rem #ceff96;
+}
+
+.default-btn {
+  background: #121212;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+
+.default-btn:hover {
+  background: #0c0b0e;
+  color: #ceff96;
+  box-shadow: 0 0 0 0.2rem #ceff96;
+}
+
+.default-btn:focus {
+  background: #0c0b0e;
+  color: #ceff96;
+  box-shadow: 0 0 0 0.2rem #ceff96;
+}
+
+.main-btn {
+  background: #AED768;
+  color: #0c0b0e;
+  padding: 7px 15px;
+  font-weight: 600;
+}
+
+.main-btn:hover {
+  background: #304807;
+  color: #ffffff;
+  box-shadow: 0 0 0 0 #0c0b0e;
+  font-weight: 600;
+}
+
+.main-btn:focus {
+  background: #304807;
+  color: #ffffff;
+  box-shadow: 0 0 0 0 #0c0b0e;
+  font-weight: 600;
+}
+
+.file-btn {
+  background: #3b3b3b;
+  color: #ffffff;
+  padding: 8px 22px;
+  position: absolute;
+  top: 19px !important;
+  left: 16px !important;
+  font-weight: 500;
+  font-size: 0.75rem;
+  z-index: 9;
+  border-radius: 5px 0 0 5px;
+}
+
+.file-btn:hover {
+  background: #121212;
+  color: #ceff96;
+  box-shadow: 0 0 0 0rem #121212;
+}
+
+.file-btn:focus {
+  background: #121212;
+  color: #ceff96;
+  box-shadow: 0 0 0 0rem #121212;
+}
+
+.mini-btn {
+  background: #FF6584;
+  color: #ffffff;
+  padding: 5px 12px;
+  font-weight: 400;
+  border-radius: 100px;
+}
+
+.mini-btn:hover {
+  background: #121212;
+  color: #ceff96;
+  box-shadow: 0 0 0 0rem #121212;
+}
+
+.mini-btn:focus {
+  background: #121212;
+  color: #ceff96;
+  box-shadow: 0 0 0 0rem #121212;
+}
+
+.mini-btn.dark {
+  background: #0c0b0e;
+}
+
+.buy-btn {
+  background: #AED768;
+  color: #0c0b0e;
+  padding: 7px  7px;
+  display: block;
+}
+
+.buy-btn:hover {
+  background: #304807;
+  color: #ceff96;
+  box-shadow: 0 0 0 0 #304807;
+}
+
+.buy-btn:focus {
+  background: #304807;
+  color: #ceff96;
+  box-shadow: 0 0 0 0 #304807;
+}
+
+nav {
+  background: #0c0b0e;
+}
+
+nav .logo {
+  height: 45px;
+}
+
+.coin-block {
+  background: #121212;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.coin-block .icon {
+  height: 85px;
+}
+
+.coin-block .coin-details {
+  position: relative;
+  overflow: hidden;
+}
+
+.coin-block .coin-details .name {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.coin-block .coin-details .currency {
+  font-weight: 400;
+}
+
+.coin-block .coin-details .available {
+  color: #AED768;
+}
+
+#home-page .landing {
+  background-image: linear-gradient(90deg, #AED768, #FFFFFF);
+  height: 100vh;
+  color: #121212;
+}
+
+#home-page .illustration {
+  width: auto;
+  max-width: 100%;
+}
+
+#home-page .crypto-value {
+  background: #0c0b0e;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+#home-page .information {
+  background: #ffffff;
+}
+
+#product-page .coin-details {
+  background-color: #121212;
+  height: 300px;
+  color: #ffffff;
+  position: relative;
+  background-blend-mode: multiply;
+  background-size: 73px;
+}
+
+#product-page .coin-details .circle-thumbnail {
+  background-color: #121212;
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  position: absolute;
+  bottom: -350px;
+}
+
+#product-page .coin-details .circle-thumbnail .second-border {
+  background: #0c0b0e;
+  border: 1px solid #AED768;
+  border-radius: 150px;
+}
+
+#product-page .coin-details .circle-thumbnail .icon {
+  width: 100%;
+}
+
+#product-page .coin-details .description {
+  position: absolute;
+  top: 220px;
+  left: 230px;
+}
+
+#product-page .coin-details .name {
+  font-size: 2.5rem;
+}
+
+#product-page .coin-details .available {
+  color: #0c0b0e;
+}
+
+#product-page .coin-details .price {
+  color: #0c0b0e;
+}
+
+#product-page .checkout {
+  margin-top: 95px;
+  background: #f0f2f5;
+}
+
+#product-page .checkout a {
+  color: #0c0b0e;
+  font-weight: 600;
+}
+
+#product-page .checkout a:hover {
+  color: #304807;
+}
+
+#product-page .checkout .instructions .steps {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#product-page .checkout .instructions .num-badge {
+  border: 3px solid #121212;
+  background: #0c0b0e;
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  color: #AED768;
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+#product-page .checkout .instructions .num-badge p {
+  font-size: 1.25rem;
+}
+
+#product-page .checkout .purchase {
+  background: #AED768;
+  border-radius: 10px;
+  color: #0c0b0e;
+}
+
+#product-page .checkout .purchase .absolute-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
+#product-page .checkout .purchase .lg-input {
+  height: 50px;
+  border-radius: 8px;
+  border: 2px solid #304807;
+  font-weight: 600;
+}
+
+#product-page .checkout .purchase .lg-input:focus {
+  box-shadow: none;
+  outline: 0;
+}
+
+#market-page {
+  background: #f0f2f5;
+  color: #0c0b0e;
+}
+
+#market-page .banner {
+  background-image: linear-gradient(90deg, #304807, #AED768);
+  margin-top: 70px;
+  color: #0c0b0e;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1350;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1550;
+  }
+}
+/*# sourceMappingURL=style.css.map */
