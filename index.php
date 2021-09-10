@@ -103,7 +103,7 @@ get_header();
                     <div class="row">
                         <div class="col-6 col-md-3 mb-4">
                             <a href="http://supsofttech.com/" target="_blank">
-                                <img src="<?php bloginfo('template_directory'); ?>/assets/img/partners/supsoftlogo.png" alt="Supsoft Tech" class="w-100">
+                                <img src="<?php bloginfo('template_directory'); ?>/assets/img/partners/Supsoftlogo.png" alt="Supsoft Tech" class="w-100">
                             </a>
                         </div>
                         <div class="col-6 col-md-3 mb-4">

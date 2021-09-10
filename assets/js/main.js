@@ -1,7 +1,7 @@
 (function($) {
     $(document).ready(function() {
         //Nav scroll
-        scroll = 0;
+        $(this).scrollTop(0)
         $(window).scroll(function () {
             //Navbar Effects
             scroll = $(this).scrollTop();
