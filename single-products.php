@@ -58,7 +58,6 @@ get_header();
                                         placeholder="Amount (<?php the_field('coin_symbol'); ?>)" 
                                         onkeypress="validate(event);"
                                         value="0"
-                                        onChange="<?php the_field('maximum_checkout'); ?>)"
                                     />
                                 </div>
                                 <div class="relative">
