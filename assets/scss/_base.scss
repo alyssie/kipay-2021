@@ -34,6 +34,11 @@ a{
         text-decoration: none;
     }
 }
+.fb-share{
+    position: absolute;
+    bottom: -335px;
+    right: 0;
+}
 .link{
     color: $secondary;
 }
@@ -128,60 +133,6 @@ a{
     outline: 0;
     box-shadow: 0 0 0 0.1rem $secondary;
 }
-.default-btn{
-    background: $black;
-    color: #ffffff;
-    padding: 10px 20px;
-    &:hover{
-        background: $dark;
-        color: $highlight;
-        box-shadow: 0 0 0 0.2rem $highlight;
-    }
-    &:focus {
-        background: $dark;
-        color: $highlight;
-        box-shadow: 0 0 0 0.2rem $highlight;
-    }
-}
-
-.default-btn {
-    background: $black;
-    color: #ffffff;
-    padding: 10px 20px;
-
-    &:hover {
-        background: $dark;
-        color: $highlight;
-        box-shadow: 0 0 0 0.2rem $highlight;
-    }
-
-    &:focus {
-        background: $dark;
-        color: $highlight;
-        box-shadow: 0 0 0 0.2rem $highlight;
-    }
-}
-
-.main-btn {
-    background: $primary;
-    color: $dark;
-    padding: 7px 15px;
-    font-weight: 600;
-    &:hover {
-        background: $secondary;
-        color: #ffffff;
-        box-shadow: 0 0 0 0.0 $dark;
-        font-weight: 600;
-    }
-    &:focus {
-        background: $secondary;
-        color: #ffffff;
-        box-shadow: 0 0 0 0.0 $dark;
-        font-weight: 600;
-    }
-}
-
-
 .file-btn {
     background: #3b3b3b;
     color: #ffffff;
@@ -228,35 +179,39 @@ a{
 }
 
 
-.buy-btn {
+.main-btn {
     background: $primary;
     color: $dark;
     padding: 7px  7px;
     display: block;
     &:hover {
-        background: $secondary;
-        color: $highlight;
-        box-shadow: 0 0 0 0.0 $secondary;
+        background: $highlight;
+        box-shadow: 0 0 0 0.0 $highlight;
     }
     &:focus {
-        background: $secondary;
-        color: $highlight;
-        box-shadow: 0 0 0 0.0 $secondary;
+        background: $highlight;
+        box-shadow: 0 0 0 0.0 $highlight;
     }
 }
 
 nav{
-    background: $dark;
-    // box-shadow: 0 -6px 0 7px;
     .logo{
         height: 45px;
     }
+    &.bg {
+        background: $dark !important;
+    }
+}
+.nav-link {
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .coin-block {
     background: $black;
     border-radius: 5px;
     color: #ffffff;
+    text-align: left;
     .icon {
         height: 85px;
     }
@@ -277,24 +232,51 @@ nav{
 }
 
 #home-page {
+    padding-top: 70px;
+    background-image: linear-gradient($dark, #3b442e, $black);
+    color: #ffffff;
+    text-shadow: 5px 5px 25px #000;
+    text-align: center;
     .landing{
-        background-image: linear-gradient(90deg, $primary, #FFFFFF);
-        height: 100vh;
-        color: $black;
+        padding-top: 80px;
+        .main-logo {
+            width: 400px;
+            margin: auto;
+            display: block;
+            margin-bottom: 35px;
+        }
     }
-    .illustration{
-        width: auto;
-        max-width: 100%;
-    }
-    .crypto-value{
-        background: $dark;
+    .market-section {
         width: 100%;
         display: flex;
         align-items: center;
         color: #ffffff;
     }
     .information {
-        background: #ffffff;
+        position: relative;
+        .roadmap{
+            .progress-line{
+                width: 65%;
+                height: 7px;
+                background: $black;
+                position: absolute;
+                top: 25px;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+            .progress-circle{
+                width: 40px;
+                height: 40px;
+                border-radius: 40px;
+                background: $highlight;
+                border: 10px solid $black;
+                margin: auto;
+            }
+        }
+    }
+    .partners {
+        text-align: center;
     }
 }
 
@@ -369,6 +351,11 @@ nav{
                     font-size: 1.25rem;
                 }
             }
+            .mop{
+                span{
+                    font-weight: 600;
+                }
+            }
         }
         .purchase {
             background: $primary;
@@ -384,8 +371,11 @@ nav{
             .lg-input {
                 height: 50px;
                 border-radius: 8px;
-                border: 2px solid $secondary;
                 font-weight: 600;
+                border: none;
+                &.readonly{
+                    background: $highlight;
+                }
                 &:focus{
                     box-shadow: none;
                     outline: 0;
@@ -395,12 +385,38 @@ nav{
     }
 }
 
-#market-page{
-    background: #f0f2f5;
+#market-page {
+    background-image: linear-gradient($dark, #3b442e, $black);
     color: $dark;
+    padding-top: 70px;
+    color: #ffffff;
+    text-shadow: 5px 5px 25px #000;
+    height: auto;
+    min-height: calc(100vh - 79px);
     .banner{
         background-image: linear-gradient(90deg, $secondary, $primary);
-        margin-top: 70px;
         color: $dark;
+        border-radius: 8px;
     }
+    .sort{
+        border-radius: 8px;
+        padding: 0 10px;
+        margin: 10px 0 0 0;
+    }
+}
+
+#blank-page{
+    background-image: linear-gradient($dark, #3b442e, $black);
+    min-height: calc(100vh - 79px);
+    padding: 100px 0;
+    .content{
+        margin-top: 50px;
+        background: #f0f2f5;
+        border-radius: 8px;
+    }
+}
+
+footer{
+    background: $dark;
+    color: #ffffff;
 }

@@ -29,6 +29,12 @@ a:hover {
   text-decoration: none;
 }
 
+.fb-share {
+  position: absolute;
+  bottom: -335px;
+  right: 0;
+}
+
 .link {
   color: #304807;
 }
@@ -152,63 +158,6 @@ a:hover {
   box-shadow: 0 0 0 0.1rem #304807;
 }
 
-.default-btn {
-  background: #121212;
-  color: #ffffff;
-  padding: 10px 20px;
-}
-
-.default-btn:hover {
-  background: #0c0b0e;
-  color: #ceff96;
-  box-shadow: 0 0 0 0.2rem #ceff96;
-}
-
-.default-btn:focus {
-  background: #0c0b0e;
-  color: #ceff96;
-  box-shadow: 0 0 0 0.2rem #ceff96;
-}
-
-.default-btn {
-  background: #121212;
-  color: #ffffff;
-  padding: 10px 20px;
-}
-
-.default-btn:hover {
-  background: #0c0b0e;
-  color: #ceff96;
-  box-shadow: 0 0 0 0.2rem #ceff96;
-}
-
-.default-btn:focus {
-  background: #0c0b0e;
-  color: #ceff96;
-  box-shadow: 0 0 0 0.2rem #ceff96;
-}
-
-.main-btn {
-  background: #AED768;
-  color: #0c0b0e;
-  padding: 7px 15px;
-  font-weight: 600;
-}
-
-.main-btn:hover {
-  background: #304807;
-  color: #ffffff;
-  box-shadow: 0 0 0 0 #0c0b0e;
-  font-weight: 600;
-}
-
-.main-btn:focus {
-  background: #304807;
-  color: #ffffff;
-  box-shadow: 0 0 0 0 #0c0b0e;
-  font-weight: 600;
-}
-
 .file-btn {
   background: #3b3b3b;
   color: #ffffff;
@@ -258,37 +207,41 @@ a:hover {
   background: #0c0b0e;
 }
 
-.buy-btn {
+.main-btn {
   background: #AED768;
   color: #0c0b0e;
   padding: 7px  7px;
   display: block;
 }
 
-.buy-btn:hover {
-  background: #304807;
-  color: #ceff96;
-  box-shadow: 0 0 0 0 #304807;
+.main-btn:hover {
+  background: #ceff96;
+  box-shadow: 0 0 0 0 #ceff96;
 }
 
-.buy-btn:focus {
-  background: #304807;
-  color: #ceff96;
-  box-shadow: 0 0 0 0 #304807;
-}
-
-nav {
-  background: #0c0b0e;
+.main-btn:focus {
+  background: #ceff96;
+  box-shadow: 0 0 0 0 #ceff96;
 }
 
 nav .logo {
   height: 45px;
 }
 
+nav.bg {
+  background: #0c0b0e !important;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
 .coin-block {
   background: #121212;
   border-radius: 5px;
   color: #ffffff;
+  text-align: left;
 }
 
 .coin-block .icon {
@@ -313,19 +266,26 @@ nav .logo {
   color: #AED768;
 }
 
+#home-page {
+  padding-top: 70px;
+  background-image: linear-gradient(#0c0b0e, #3b442e, #121212);
+  color: #ffffff;
+  text-shadow: 5px 5px 25px #000;
+  text-align: center;
+}
+
 #home-page .landing {
-  background-image: linear-gradient(90deg, #AED768, #FFFFFF);
-  height: 100vh;
-  color: #121212;
+  padding-top: 80px;
 }
 
-#home-page .illustration {
-  width: auto;
-  max-width: 100%;
+#home-page .landing .main-logo {
+  width: 400px;
+  margin: auto;
+  display: block;
+  margin-bottom: 35px;
 }
 
-#home-page .crypto-value {
-  background: #0c0b0e;
+#home-page .market-section {
   width: 100%;
   display: flex;
   align-items: center;
@@ -333,7 +293,31 @@ nav .logo {
 }
 
 #home-page .information {
-  background: #ffffff;
+  position: relative;
+}
+
+#home-page .information .roadmap .progress-line {
+  width: 65%;
+  height: 7px;
+  background: #121212;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#home-page .information .roadmap .progress-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background: #ceff96;
+  border: 10px solid #121212;
+  margin: auto;
+}
+
+#home-page .partners {
+  text-align: center;
 }
 
 #product-page .coin-details {
@@ -420,6 +404,10 @@ nav .logo {
   font-size: 1.25rem;
 }
 
+#product-page .checkout .instructions .mop span {
+  font-weight: 600;
+}
+
 #product-page .checkout .purchase {
   background: #AED768;
   border-radius: 10px;
@@ -437,8 +425,12 @@ nav .logo {
 #product-page .checkout .purchase .lg-input {
   height: 50px;
   border-radius: 8px;
-  border: 2px solid #304807;
   font-weight: 600;
+  border: none;
+}
+
+#product-page .checkout .purchase .lg-input.readonly {
+  background: #ceff96;
 }
 
 #product-page .checkout .purchase .lg-input:focus {
@@ -447,14 +439,42 @@ nav .logo {
 }
 
 #market-page {
-  background: #f0f2f5;
+  background-image: linear-gradient(#0c0b0e, #3b442e, #121212);
   color: #0c0b0e;
+  padding-top: 70px;
+  color: #ffffff;
+  text-shadow: 5px 5px 25px #000;
+  height: auto;
+  min-height: calc(100vh - 79px);
 }
 
 #market-page .banner {
   background-image: linear-gradient(90deg, #304807, #AED768);
-  margin-top: 70px;
   color: #0c0b0e;
+  border-radius: 8px;
+}
+
+#market-page .sort {
+  border-radius: 8px;
+  padding: 0 10px;
+  margin: 10px 0 0 0;
+}
+
+#blank-page {
+  background-image: linear-gradient(#0c0b0e, #3b442e, #121212);
+  min-height: calc(100vh - 79px);
+  padding: 100px 0;
+}
+
+#blank-page .content {
+  margin-top: 50px;
+  background: #f0f2f5;
+  border-radius: 8px;
+}
+
+footer {
+  background: #0c0b0e;
+  color: #ffffff;
 }
 
 @media (min-width: 1400px) {
@@ -466,6 +486,48 @@ nav .logo {
 @media (min-width: 1600px) {
   .container {
     max-width: 1550;
+  }
+}
+
+@media (max-width: 992px) {
+  .fb-share {
+    position: absolute;
+    bottom: -505px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  #product-page .coin-details .circle-thumbnail {
+    left: 0;
+    right: 0;
+    bottom: -300px;
+    margin: auto;
+  }
+  #product-page .coin-details .description {
+    position: absolute;
+    top: 320px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    color: black;
+  }
+  #product-page .coin-details .description .name {
+    font-size: 1.875rem;
+    font-weight: 300;
+    color: #121212;
+  }
+  #product-page .coin-details .description .name span {
+    font-weight: 300;
+  }
+  #product-page .checkout {
+    margin-top: 180px;
+  }
+  #product-page .checkout .purchase {
+    margin-top: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */

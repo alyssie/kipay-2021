@@ -9,3 +9,49 @@
         max-width: 1550;
     }
 }
+
+@media (max-width: 992px) {
+    .fb-share{
+        position: absolute;
+        bottom: -505px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    #product-page{
+        .coin-details{
+            .circle-thumbnail {
+                left: 0;
+                right: 0;
+                bottom: -300px;
+                margin: auto;
+            }
+            .description{
+                position: absolute;
+                top: 320px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 100%;
+                text-align: center;
+                color: black;
+                .name{
+                    font-size: 1.875rem;
+                    font-weight: 300;
+                    color: $black;
+                    span {
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+        .checkout{
+            margin-top: 180px;
+            .purchase{
+                margin-top: 30px;
+            }
+        }
+    }
+}

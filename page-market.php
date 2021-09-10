@@ -2,15 +2,15 @@
 get_header();
 ?>
 <div id="market-page">
-    <section class="banner py-5">
-        <div class="container">
-            <div class="row">
+    <!-- <section class="container">
+        <div class="banner mt-5">
+            <div class="row py-5">
                 <div class="col-12">
                     Banner
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <section class="crypto-value py-5">
         <?php
             $optvalue = 'Sort by';
@@ -28,12 +28,12 @@ get_header();
         ?>
         <div class="container py-4">
             <div class="row">
-                <div class="col-9">
-                    <h1 class="t-lg semibold">Coin Market</h1>
+                <div class="col-12 col-md-9">
+                    <h1 class="t-xl bold mb-4">Coin Market</h1>
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-md-3">
                     <form method="get" action="/market/<?php echo $_SERVER['PHP_SELF'];?>" class="d-flex">
-                        <select name="odr" onchange='this.form.submit()' class="ml-auto">
+                        <select name="odr" onchange='this.form.submit()' class="sort mr-auto mr-md-0 ml-md-auto">
                             <option value="" class="d-none"><?php echo $optvalue; ?></option>
                             <option value="1">Lowest Price</option>
                             <option value="2">Highest Price</option>
@@ -56,7 +56,7 @@ get_header();
                                             <p class="t-lg bold mt-2 ellipsis"><?php the_field('coin_price') ?> <span class="currency">PHP</span></p>
                                         </div>
                                     </div>
-                                    <a href="<?php the_permalink(); ?>" class="btn buy-btn mt-4 uppercase bold">Buy now</a>
+                                    <a href="<?php the_permalink(); ?>" class="btn main-btn mt-4 uppercase bold">Buy now</a>
                                 </div>
                             </div>
                         <?php endwhile;
