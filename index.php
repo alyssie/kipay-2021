@@ -27,7 +27,7 @@ get_header();
             </div>
             <div class="row">
                 <?php
-                    $available_coins = new WP_Query( array( 'post_type' => 'products') );
+                    $available_coins = new WP_Query( array( 'post_type' => 'products, posts_per_page' => 6) );
                     if ( $available_coins->have_posts() ) :
                         while ( $available_coins->have_posts() ) : $available_coins->the_post(); ?>
                             <div class="col-12 col-md-6 col-lg-4">
