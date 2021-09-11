@@ -98,7 +98,7 @@ get_header();
                 <div class="col-12 col-xl-4 my-auto">
                     <h2 class="t-xxl lh-2 bold uppercase text-center text-xl-right">Latest<br>Transactions</h2>
                 </div>
-                <div class="col-12 col-xl-4">
+                <div class="col-12 col-xl-8">
                     <div class="transaction-table">
                         <div class="row thead">
                             <div class="col-4">
