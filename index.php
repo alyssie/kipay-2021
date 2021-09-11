@@ -95,10 +95,10 @@ get_header();
     <section class="transactions py-3 py-lg-5">
         <div class="container py-0 py-md-5">
             <div class="row">
-                <div class="col-4 my-auto">
-                    <h2 class="t-xxl lh-2 bold uppercase text-right">Latest<br>Transactions</h2>
+                <div class="col-12 col-xl-4 my-auto">
+                    <h2 class="t-xxl lh-2 bold uppercase text-center text-xl-right">Latest<br>Transactions</h2>
                 </div>
-                <div class="col-8">
+                <div class="col-12 col-xl-4">
                     <div class="transaction-table">
                         <div class="row thead">
                             <div class="col-4">
@@ -123,7 +123,7 @@ get_header();
                                             <p><?php the_field('coin_qty'); ?> <?php the_field('coin_symbol'); ?></p>
                                         </div>
                                         <div class="col-4">
-                                            <p><?php echo get_the_date(); ?> <?php echo get_the_time(); ?></p>
+                                            <p><?php echo get_the_date(); ?> | <?php echo get_the_time(); ?></p>
                                         </div>
                                     </div>
                                 <?php endwhile;
