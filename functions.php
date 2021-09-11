@@ -23,3 +23,11 @@ add_action('wp_enqueue_scripts', 'wc_resources');
 
 // Add Logo
 add_theme_support( 'custom-logo' );
+
+//Functions
+function stringToSecret($string){
+    $length = strlen($string);
+    $visibleCount = (int) round($length / 7);
+    $hiddenCount = $length - ($visibleCount * 5);
+    return substr($string, 0, $visibleCount) . str_repeat('*', $hiddenCount) . substr($string, ($visibleCount * -1), $visibleCount);
+}

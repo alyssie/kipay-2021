@@ -92,6 +92,49 @@ get_header();
             </div>
         </div>
     </section>
+    <section class="transactions py-3 py-lg-5">
+        <div class="container py-0 py-md-5">
+            <div class="row">
+                <div class="col-4 my-auto">
+                    <h2 class="t-xxl lh-2 bold uppercase text-right">Latest<br>Transactions</h2>
+                </div>
+                <div class="col-8">
+                    <div class="transaction-table">
+                        <div class="row thead">
+                            <div class="col-4">
+                                <p>Contract Address</p>
+                            </div>
+                            <div class="col-4">
+                                <p>Description</p>
+                            </div>
+                            <div class="col-4">
+                                <p>Date</p>
+                            </div>
+                        </div>
+                        <?php
+                            $latesttrans = new WP_Query( array( 'post_type' => 'buy-transaction', 'posts_per_page' => 10) );
+                            if ( $latesttrans->have_posts() ) :
+                                while ( $latesttrans->have_posts() ) : $latesttrans->the_post(); ?>
+                                    <div class="row tbody">
+                                        <div class="col-4">
+                                            <p><?php echo stringToSecret(get_field('contract_address')); ?></p>
+                                        </div>
+                                        <div class="col-4">
+                                            <p><?php the_field('coin_quantity'); ?> <?php the_field('coin_symbol'); ?></p>
+                                        </div>
+                                        <div class="col-4">
+                                            <p><?php echo get_the_date(); ?> <?php echo get_the_date(); ?></p>
+                                        </div>
+                                    </div>
+                                <?php endwhile;
+                            endif;
+                            wp_reset_postdata();
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="partners py-3 py-lg-5">
         <div class="container py-0 py-md-5">
             <div class="row py-5">

@@ -278,6 +278,35 @@ nav{
     .partners {
         text-align: center;
     }
+    .transactions{
+        .transaction-table{
+            padding: 0 50px;
+            text-align: left;
+            .thead {
+                background: $black;
+                text-transform: uppercase;
+                color: #ffffff;
+                border-radius: 8px 8px 0 0;
+                padding: 15px 0;
+                div{
+                    p{
+                        padding: 0 15px;
+                    }
+                }
+            }
+            .tbody {
+                color: #ffffff;
+                font-weight: 100;
+                border: 1px solid $dark;
+                div {
+                    overflow: hidden;
+                    p{
+                        padding: 10px 15px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 #product-page{

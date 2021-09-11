@@ -320,6 +320,37 @@ nav.bg {
   text-align: center;
 }
 
+#home-page .transactions .transaction-table {
+  padding: 0 50px;
+  text-align: left;
+}
+
+#home-page .transactions .transaction-table .thead {
+  background: #121212;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-radius: 8px 8px 0 0;
+  padding: 15px 0;
+}
+
+#home-page .transactions .transaction-table .thead div p {
+  padding: 0 15px;
+}
+
+#home-page .transactions .transaction-table .tbody {
+  color: #ffffff;
+  font-weight: 100;
+  border: 1px solid #0c0b0e;
+}
+
+#home-page .transactions .transaction-table .tbody div {
+  overflow: hidden;
+}
+
+#home-page .transactions .transaction-table .tbody div p {
+  padding: 10px 15px;
+}
+
 #product-page .coin-details {
   background-color: #121212;
   height: 300px;
