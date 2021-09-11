@@ -11,7 +11,7 @@ $max = 7000;
             <div class="row">
                 <div class="col-12 mb-4 relative">
                     <div class="fb-share">
-                        <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="large">
+                        <div class="fb-share-button" data-href="<?php get_permalink(); ?>" data-layout="button" data-size="large">
                             <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
                                 Share
                             </a>
