@@ -13,10 +13,16 @@
         });
 
         //Product Page
+        setQuantity();
         $('#buyer-info').addClass('opacity-half');
         $('.buyer-info').prop('disabled', true);
-        $('#order-qty').change(setQuantity);
-        $('#order-qty').keypress(setQuantity);
+        $('#convert').click(setQuantity);
+        $('#order-qty').keypress(function(e){
+            validate(e);
+            if(e.keyCode==13){
+                setQuantity();
+            }
+        });
     });
 
     function setQuantity(){
@@ -37,13 +43,14 @@
         $('.purchase-fee').val(fee);
         $('.purchase-symbol').val(symbol);
 
-        if(qty <= min || qty > max){
+        if(qty < min || qty > max){
             $('.max-err').addClass('err');
             $('#buyer-info').addClass('opacity-half');
-            $('.buyer-info').prop('disabled', false);
-        }else if(qty > min && qty <= max){
+            $('.buyer-info').prop('disabled', true);
+        }else if(qty >= min && qty <= max){
             $('.max-err').removeClass('err');
             $('#buyer-info').removeClass('opacity-half');
+            $('.buyer-info').prop('disabled', false);
         }
     };
     

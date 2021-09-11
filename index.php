@@ -27,7 +27,7 @@ get_header();
             </div>
             <div class="row">
                 <?php
-                    $available_coins = new WP_Query( array( 'post_type' => 'products', 'posts_per_page' => 3) );
+                    $available_coins = new WP_Query( array( 'post_type' => 'products', 'posts_per_page' => 6) );
                     if ( $available_coins->have_posts() ) :
                         while ( $available_coins->have_posts() ) : $available_coins->the_post(); ?>
                             <div class="col-12 col-md-6 col-lg-4">
@@ -80,7 +80,7 @@ get_header();
                             <div class="col-12 col-lg-4">
                                 <div class="p-2">
                                     <div class="progress-circle"></div>
-                                    <h4 class="t-lg bold mt-4">Decemebr 2022</h4>
+                                    <h4 class="t-lg bold mt-4">December 2021</h4>
                                     <p>1 Lucky trader will receive a special gift</p>
                                     <p>5 Random wallets will win PVU coins</p>
                                     <p>Apply more engaging gamification</p>
