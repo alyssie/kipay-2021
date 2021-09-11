@@ -7,7 +7,7 @@
     </head>
     <body <?php body_class(); ?>>
     <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0&appId=3782191628533831&autoLogAppEvents=1" nonce="84OspxmU"></script>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0&appId=1249939662147636&autoLogAppEvents=1" nonce="84OspxmU"></script>
         <nav class="navbar navbar-expand-lg fixed-top px-5">
             <div class="container">
                 <a class="navbar-brand" href="/"><img src="<?php bloginfo('template_directory'); ?>/assets/img/logo.png" alt="KiPay" class="logo"></a>

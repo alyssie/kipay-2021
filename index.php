@@ -97,7 +97,6 @@ get_header();
             <div class="row py-5">
                 <div class="col-12">
                     <h2 class="t-xl lh-2 bold uppercase">Partners</h2>
-                    <p class="t-sm ls-1 light mb-4">Our inbox is always open for any suggestions.</p>
                 </div>
                 <div class="col-8 mx-auto">
                     <div class="row">
