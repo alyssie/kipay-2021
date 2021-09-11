@@ -38,7 +38,7 @@
         $('.purchase-qty').val(qty);
         $('.purchase-amount-total').text(total);
         $('.purchase-amount-total-value').val(total);
-        $('.purchase-amount-subtotal').val(total + "PHP");
+        $('.purchase-amount-subtotal').val(subTotal + "PHP");
         $('.purchase-current-price').val(price);
         $('.purchase-fee').val(fee);
         $('.purchase-symbol').val(symbol);
