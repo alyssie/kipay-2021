@@ -112,7 +112,7 @@ get_header();
                             </div>
                         </div>
                         <?php
-                            $latesttrans = new WP_Query( array( 'post_type' => 'buy-transaction', 'posts_per_page' => 10) );
+                            $latesttrans = new WP_Query( array( 'post_type' => 'buy-transactions', 'posts_per_page' => 10) );
                             if ( $latesttrans->have_posts() ) :
                                 while ( $latesttrans->have_posts() ) : $latesttrans->the_post(); ?>
                                     <div class="row tbody">
