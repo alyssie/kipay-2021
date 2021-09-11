@@ -3,7 +3,8 @@ get_header();
 ?>
 <?php
 $min = 2000;
-$max = 7000; 
+$max = 7000;
+$fee = 500;
 ?>
 <div id="product-page">
     <section class="coin-details" style="background-image: url('<?php the_field('coin_icon'); ?>')">
@@ -70,7 +71,7 @@ $max = 7000;
                                 </div>
                                 <div class="relative">
                                     <hr>
-                                    <p class="text-right">+<span id="trans-fee">250</span> PHP <span class="t-sm">Transaction Fee</span></p>
+                                    <p class="text-right">+<span id="trans-fee"><?php echo $fee; ?></span> PHP <span class="t-sm">Transaction Fee</span></p>
                                     <p class="text-right bold t-md uppercase">Total: <span class="t-md purchase-amount-total">0</span> PHP</p>
                                 </div>
                             </div>
