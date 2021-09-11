@@ -120,10 +120,10 @@ get_header();
                                             <p><?php echo stringToSecret(get_field('contract_address')); ?></p>
                                         </div>
                                         <div class="col-4">
-                                            <p><?php the_field('coin_quantity'); ?> <?php the_field('coin_symbol'); ?></p>
+                                            <p><?php the_field('coin_qty'); ?> <?php the_field('coin_symbol'); ?></p>
                                         </div>
                                         <div class="col-4">
-                                            <p><?php echo get_the_date(); ?> <?php echo get_the_date(); ?></p>
+                                            <p><?php echo get_the_date(); ?> <?php echo get_the_time(); ?></p>
                                         </div>
                                     </div>
                                 <?php endwhile;
