@@ -1,11 +1,6 @@
 <?php 
 get_header();
 ?>
-<?php
-$min = 2000;
-$max = 7000;
-$fee = 500;
-?>
 <div id="product-page">
     <section class="coin-details">
         <div class="container py-4">
@@ -58,9 +53,9 @@ $fee = 500;
                             <div class="col-12 mb-2">
                                 <p class="coin-order-limit d-none err uppercase t-sm semibold ls-1 mb-2">
                                     Limit: 
-                                    <span class="t-sm"><?php echo number_format($min / get_field('coin_price'), 2, '.', '') ?></span>
+                                    <span id="min-checkout" class="t-sm"><?php echo number_format($min / get_field('coin_price'), 2, '.', '') ?></span>
                                     <?php the_field('coin_symbol') ?> - 
-                                    <span class="t-sm"><?php echo number_format($max / get_field('coin_price'),2, '.', '') ?></span>
+                                    <span id="max-checkout" class="t-sm"><?php echo number_format($max / get_field('coin_price'),2, '.', '') ?></span>
                                     <?php the_field('coin_symbol') ?>
                                 </p>
                                 <div class="relative">

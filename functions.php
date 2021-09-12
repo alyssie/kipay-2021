@@ -21,6 +21,11 @@ function wc_resources(){
 }
 add_action('wp_enqueue_scripts', 'wc_resources');
 
+//Values
+$min = 2000;
+$max = 7000;
+$fee = 500;
+
 //Functions
 function stringToSecret($string){
     $length = strlen($string);

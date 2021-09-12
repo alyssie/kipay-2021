@@ -38,7 +38,7 @@
         if(isNaN(subTotal)) {
             var subTotal = 0;
         }
-
+        
         $('.purchase-qty').val(qty.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
         $('.purchase-amount-total').text(total.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
         $('.purchase-amount-total-value').val(total.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));

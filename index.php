@@ -36,7 +36,10 @@ get_header();
                                         <img src="<?php the_field('coin_icon') ?>" alt="<?php the_field('coin_symbol') ?>" class="icon mr-3">
                                         <div class="coin-details">
                                             <h5 class="m-0 lh-2 name ellipsis"><?php the_field('coin_name') ?> <span class="light">(<?php the_field('coin_symbol') ?>)</span></h5>
-                                            <p class="available t-xs light ellipsis"><?php the_field('coin_quantity') ?> <?php the_field('coin_symbol') ?> ( <?php echo get_field('coin_quantity') * get_field('coin_price') ?> PHP) Available</p>
+                                            <p class="available t-xs ls-1 light ellipsis">
+                                                <?php echo number_format($min / get_field('coin_price'), 2, '.', '') ?> <?php the_field('coin_symbol') ?> - 
+                                                <?php echo number_format($max / get_field('coin_price'),2, '.', '') ?> <?php the_field('coin_symbol') ?>
+                                            </p>
                                             <p class="t-lg bold mt-2 ellipsis"><?php the_field('coin_price') ?> <span class="currency">PHP</span></p>
                                         </div>
                                     </div>
