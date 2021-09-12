@@ -7,35 +7,34 @@ $max = 7000;
 $fee = 500;
 ?>
 <div id="product-page">
-    <section class="coin-details">
+    <section class="coin-details" style="background-image: url('<?php the_field('coin_icon'); ?>')">
         <div class="container py-4">
             <div class="row">
-                <div class="col-12 relative">
-                    <div class="details p-4">
+                <div class="col-12 mb-4 relative">
+                    <div class="fb-share">
+                        <div class="fb-share-button" data-href="<?php get_permalink(); ?>" data-layout="button" data-size="large">
+                            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
+                                Share
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-flex">
                         <div class="circle-thumbnail p-2">
                             <div class="second-border d-flex p-4">
                                 <img src="<?php the_field('coin_icon') ?>" alt="<?php the_field('coin_symbol'); ?>" class="icon">
                             </div>
                         </div>
                         <div class="description">
-                            <div class="d-flex justify-content-center align-items-center">
-                                <h1 class="name bold my-4 t-xl"><?php the_field('coin_name'); ?> <span class="light t-lg"> (<?php the_field('coin_symbol'); ?>)</span></h1>
-                                <div class="fb-share-button mx-3" data-href="<?php get_permalink(); ?>" data-layout="button" data-size="large">
-                                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
-                                        Share
-                                    </a>
-                                </div>
-                            </div>
-                            <p class="uppercase t-xs light ls-2">Current Price</p>
-                            <p class="price t-xl bold">
-                                <span id="current-price" class="price t-xl bold"><?php the_field('coin_price') ?></span> PHP
+                            <h1 class="name bold"><?php the_field('coin_name'); ?> <span class="t-lg light"> (<?php the_field('coin_symbol'); ?>)</span></h1>
+                            <p class="price t-xl bold mt-0 mt-lg-3">
+                                <span id="current-price" class="price t-xl bold"><?php the_field('coin_price') ?></span> PHP 
                                 <a href="<?php the_field('coin_gecko_link') ?>" class="ml-2 btn mini-btn t-xs d-none d-lg-inline">Compare on CoinGecko</a>
                             </p>
-                            <p class="available t-sm ellipsis light ls-2">
+                            <p class="available t-sm ellipsis">
                                 Order limit: 
-                                <span class="t-sm"><?php echo number_format(floor($min / get_field('coin_price'))/100,2, '.', '') ?></span>
+                                <span id="min-checkout" class="t-sm"><?php echo $min / get_field('coin_price') ?></span>
                                 <?php the_field('coin_symbol') ?> - 
-                                <span class="t-sm"><?php echo number_format(floor($max / get_field('coin_price'))/100,2, '.', '') ?></span>
+                                <span id="max-checkout" class="t-sm"><?php echo $max / get_field('coin_price') ?></span>
                                 <?php the_field('coin_symbol') ?>
                             </p>
                         </div>
@@ -44,10 +43,10 @@ $fee = 500;
             </div>
         </div>
     </section>
-    <section class="checkout pb-5">
-        <div class="container">
+    <section class="checkout py-4 py-lg-5">
+        <div class="container py-4">
             <div class="row">
-                <div class="col-12 col-md-12 col-lg-5 col-xl-5 px-3">    
+                <div class="col-12 col-md-12 col-lg-5 col-xl-5">    
                     <div class="purchase px-5 py-4">
                         <div class="row pt-2 mb-2">
                             <div class="col-12">
@@ -58,22 +57,23 @@ $fee = 500;
                             <div class="col-12 mb-2">
                                 <p class="coin-order-limit d-none err uppercase t-sm semibold ls-1 mb-2">
                                     Limit: 
-                                    <span id="min-checkout" class="t-sm"><?php echo number_format(floor($min / get_field('coin_price'))/100,2, '.', '') ?></span>
+                                    <span id="min-checkout" class="t-sm"><?php echo $min / get_field('coin_price') ?></span>
                                     <?php the_field('coin_symbol') ?> - 
-                                    <span id="max-checkout" class="t-sm"><?php echo number_format(floor($max / get_field('coin_price'))/100,2, '.', '') ?></span>
+                                    <span id="max-checkout" class="t-sm"><?php echo $max / get_field('coin_price') ?></span>
                                     <?php the_field('coin_symbol') ?>
                                 </p>
                                 <div class="relative">
                                     <label for="order-qty" class="absolute-label t-sm ls-1 semibold uppercase">Quantity</label>
-                                    <input type="text" onPaste="return false"
+                                    <input type="text" 
                                         id="order-qty" class="lg-input w-100 text-center my-1" 
                                         placeholder="Amount (<?php the_field('coin_symbol'); ?>)"
-                                        value="<?php echo number_format(floor($min / get_field('coin_price'))/100,2, '.', '') ?>"
+                                        value="<?php echo $min / get_field('coin_price') ?>"
                                     />
                                 </div>
                                 <div class="relative">
-                                    <label class="absolute-label t-sm ls-1 semibold uppercase">Subtotal</label>
+                                    <label class="absolute-label t-sm ls-1 semibold uppercase">Price</label>
                                     <input type="text" class="readonly purchase-amount-subtotal lg-input w-100 text-center my-1" placeholder="Value in PHP" readonly disabled/>
+                                    <button id="convert" class="btn mini-btn dark d-block w-100 mt-2">Convert</button>
                                 </div>
                                 <div class="relative">
                                     <hr>
@@ -91,19 +91,20 @@ $fee = 500;
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-12 col-lg-7 col-xl-7 my-lg-0 mt-4">
-                    <div class="instructions px-3 px-lg-2">
-                        <div class="row block px-4 py-5">
+                <div class="col-12 col-md-12 col-lg-7 col-xl-7 my-lg-0 mt-5">
+                    <div class="instructions px-0 px-lg-5">
+                        <div class="row">
                             <div class="col-12">
                                 <h3 class="t-xl bold">Payment Methods</h3>
                             </div>
                             <div class="col-12 mb-3">
                                 <p class="t-sm">Send your payments to any of the following bank accounts.<br>Please note that we will only send the coin once your payment reflected on our end.</p>
                             </div>
-                            <div class="col-12 col-md-6 my-2">
+                            <div class="col-12 my-2">
                                 <div class="mop">
                                     <p>
-                                        <span>Gcash</span>
+                                        <span>Bank Name:</span>
+                                        Gcash
                                     </p>
                                     <p>
                                         <span>Account Name:</span>
@@ -115,10 +116,11 @@ $fee = 500;
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6 my-2">
+                            <div class="col-12 my-2">
                                 <div class="mop">
                                     <p>
-                                        <span>Bank of the Philippine Islands (BPI)</span>
+                                        <span>Bank Name:</span>
+                                        Bank of the Philippine Islands (BPI)
                                     </p>
                                     <p>
                                         <span>Account Name:</span>
@@ -131,10 +133,10 @@ $fee = 500;
                                 </div>
                             </div>
                         </div>
-                        <div class="row block px-4 py-5 mt-4">
+                        <div class="row mt-5">
                             <div class="col-12">
-                                <h2 class="t-xl bold text-center text-lg-left">How to buy <?php the_field('coin_symbol'); ?>?</h2>
-                                <p class="t-sm mb-5 text-center text-lg-left">KiPay offers P2P transaction. This means that every transaction is manually made and processed by KiPay staff. Please note that <?php the_field('coin_symbol'); ?> is on <?php the_field('coin_network'); ?> Network and will be sent directly to your wallet. Our Facebook Messenger is 24/7 active for any of your concerns.</p>
+                                <h2 class="t-xl bold">How to buy <?php the_field('coin_symbol'); ?>?</h2>
+                                <p class="t-sm mb-5">KiPay offers P2P transaction. This means that every transaction is manually made and processed by KiPay staff. Please note that <?php the_field('coin_symbol'); ?> is on <?php the_field('coin_network'); ?> Network and will be sent directly to your wallet. Our Facebook Messenger is 24/7 active for any of your concerns.</p>
                             </div>
                             <div class="col-6 col-md-3 mt-0">
                                 <div class="num-badge">

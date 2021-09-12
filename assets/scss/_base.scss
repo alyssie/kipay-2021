@@ -34,11 +34,6 @@ a{
         text-decoration: none;
     }
 }
-.fb-share{
-    position: absolute;
-    bottom: -335px;
-    right: 0;
-}
 .link{
     color: $secondary;
 }
@@ -326,48 +321,34 @@ nav{
     }
 }
 
-#product-page{
+#product-page {
+    background-image: linear-gradient($dark, #3b442e, $black);
     .coin-details {
-        background-color: $black;
-        height: 300px;
-        color: #ffffff;
-        position: relative;
-        background-blend-mode: multiply;
-        background-size: 73px;
-        .circle-thumbnail {
-            background-color: $black;
-            width: 200px;
-            height: 200px;
-            border-radius: 200px;
-            position: absolute;
-            bottom: -350px;
-            .second-border {
-                background: $dark;
-                border: 1px solid $primary;
-                border-radius: 150px;
-            }
-            .icon {
-                width: 100%;
+        padding-top: 70px;
+        .details {
+            text-shadow: 5px 5px 25px #000;
+            .circle-thumbnail {
+                background-color: $black;
+                width: 200px;
+                height: 200px;
+                border-radius: 200px;
+                margin: auto;
+                .second-border {
+                    background: $dark;
+                    border: 1px solid #ffffff1a;
+                    border-radius: 150px;
+                }
+                .icon {
+                    width: 100%;
+                }
             }
         }
-        .description {
-            position: absolute;
-            top: 220px;
-            left: 230px;
-        }
-        .name{
-            font-size: 2.5rem;
-        }
-        .available {
-            color: $dark;
-        }
-        .price{
-            color: $dark;
+        .description{
+            color: #ffffff;
+            text-align: center;
         }
     }
     .checkout{
-        margin-top: 95px;
-        background: #f0f2f5;
         a{
             color: $dark;
             font-weight: 600;
@@ -375,7 +356,13 @@ nav{
                 color: $secondary;
             }
         }
-        .instructions{
+        .instructions {
+            color: #ffffff;
+            text-shadow: 5px 5px 25px #000;
+            .block{
+                background: #ffffff1a;
+                border-radius: 8px;
+            }
             .steps{
                 text-align: center;
                 margin-top: 10px;
@@ -398,6 +385,12 @@ nav{
                 }
             }
             .mop{
+                background: #fff;
+                color: $dark;
+                padding: 10px;
+                border-radius: 8px;
+                text-shadow: none;
+                box-shadow: 5px 5px 25px #00000063;
                 span{
                     font-weight: 600;
                 }
@@ -407,6 +400,7 @@ nav{
             background: $primary;
             border-radius: 10px;
             color: $dark;
+            height: 100%;
             .absolute-label {
                 position: absolute;
                 top: 10px;

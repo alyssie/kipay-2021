@@ -29,12 +29,6 @@ a:hover {
   text-decoration: none;
 }
 
-.fb-share {
-  position: absolute;
-  bottom: -335px;
-  right: 0;
-}
-
 .link {
   color: #304807;
 }
@@ -374,55 +368,39 @@ nav.bg {
   padding: 10px 15px;
 }
 
-#product-page .coin-details {
-  background-color: #121212;
-  height: 300px;
-  color: #ffffff;
-  position: relative;
-  background-blend-mode: multiply;
-  background-size: 73px;
+#product-page {
+  background-image: linear-gradient(#0c0b0e, #3b442e, #121212);
 }
 
-#product-page .coin-details .circle-thumbnail {
+#product-page .coin-details {
+  padding-top: 70px;
+}
+
+#product-page .coin-details .details {
+  text-shadow: 5px 5px 25px #000;
+}
+
+#product-page .coin-details .details .circle-thumbnail {
   background-color: #121212;
   width: 200px;
   height: 200px;
   border-radius: 200px;
-  position: absolute;
-  bottom: -350px;
+  margin: auto;
 }
 
-#product-page .coin-details .circle-thumbnail .second-border {
+#product-page .coin-details .details .circle-thumbnail .second-border {
   background: #0c0b0e;
-  border: 1px solid #AED768;
+  border: 1px solid #ffffff1a;
   border-radius: 150px;
 }
 
-#product-page .coin-details .circle-thumbnail .icon {
+#product-page .coin-details .details .circle-thumbnail .icon {
   width: 100%;
 }
 
 #product-page .coin-details .description {
-  position: absolute;
-  top: 220px;
-  left: 230px;
-}
-
-#product-page .coin-details .name {
-  font-size: 2.5rem;
-}
-
-#product-page .coin-details .available {
-  color: #0c0b0e;
-}
-
-#product-page .coin-details .price {
-  color: #0c0b0e;
-}
-
-#product-page .checkout {
-  margin-top: 95px;
-  background: #f0f2f5;
+  color: #ffffff;
+  text-align: center;
 }
 
 #product-page .checkout a {
@@ -432,6 +410,16 @@ nav.bg {
 
 #product-page .checkout a:hover {
   color: #304807;
+}
+
+#product-page .checkout .instructions {
+  color: #ffffff;
+  text-shadow: 5px 5px 25px #000;
+}
+
+#product-page .checkout .instructions .block {
+  background: #ffffff1a;
+  border-radius: 8px;
 }
 
 #product-page .checkout .instructions .steps {
@@ -458,6 +446,15 @@ nav.bg {
   font-size: 1.25rem;
 }
 
+#product-page .checkout .instructions .mop {
+  background: #fff;
+  color: #0c0b0e;
+  padding: 10px;
+  border-radius: 8px;
+  text-shadow: none;
+  box-shadow: 5px 5px 25px #00000063;
+}
+
 #product-page .checkout .instructions .mop span {
   font-weight: 600;
 }
@@ -466,6 +463,7 @@ nav.bg {
   background: #AED768;
   border-radius: 10px;
   color: #0c0b0e;
+  height: 100%;
 }
 
 #product-page .checkout .purchase .absolute-label {
@@ -553,35 +551,8 @@ footer {
     display: flex;
     justify-content: center;
   }
-  #product-page .coin-details .circle-thumbnail {
-    left: 0;
-    right: 0;
-    bottom: -300px;
-    margin: auto;
-  }
-  #product-page .coin-details .description {
-    position: absolute;
-    top: 320px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 100%;
-    text-align: center;
-    color: black;
-  }
-  #product-page .coin-details .description .name {
-    font-size: 1.875rem;
-    font-weight: 300;
-    color: #121212;
-  }
-  #product-page .coin-details .description .name span {
-    font-weight: 300;
-  }
-  #product-page .checkout {
-    margin-top: 180px;
-  }
   #product-page .checkout .purchase {
-    margin-top: 30px;
+    height: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

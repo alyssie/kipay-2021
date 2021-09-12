@@ -14,14 +14,11 @@
 
         //Product Page
         setQuantity();
-        $('#buyer-info').addClass('opacity-half');
-        $('.buyer-info').prop('disabled', true);
-        $('#convert').click(setQuantity);
+        $('#buyer-info').prop('disabled', true);
+        // $('#convert').click(setQuantity);
+        $('#order-qty').keyup(setQuantity);
         $('#order-qty').keypress(function(e){
             validate(e);
-            if(e.keyCode==13){
-                setQuantity();
-            }
         });
     });
 
@@ -35,21 +32,28 @@
         var fee = parseFloat($('#trans-fee').text());
         var total = subTotal + fee;
 
-        $('.purchase-qty').val(qty);
-        $('.purchase-amount-total').text(total);
-        $('.purchase-amount-total-value').val(total);
-        $('.purchase-amount-subtotal').val(subTotal + "PHP");
-        $('.purchase-current-price').val(price);
-        $('.purchase-fee').val(fee);
+        if(isNaN(total)) {
+            var total = 0;
+        }
+        if(isNaN(subTotal)) {
+            var subTotal = 0;
+        }
+
+        $('.purchase-qty').val(qty.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+        $('.purchase-amount-total').text(total.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+        $('.purchase-amount-total-value').val(total.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+        $('.purchase-amount-subtotal').val(subTotal.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " PHP");
+        $('.purchase-current-price').val(price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+        $('.purchase-fee').val(fee.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
         $('.purchase-symbol').val(symbol);
 
         if(qty < min || qty > max){
-            $('.max-err').addClass('err');
+            $('.coin-order-limit').removeClass('d-none');
             $('#buyer-info').addClass('opacity-half');
             $('.buyer-info').prop('disabled', true);
         }else if(qty >= min && qty <= max){
-            $('.max-err').removeClass('err');
-            $('#buyer-info').removeClass('opacity-half');
+            $('.coin-order-limit').addClass('d-none');
+        $('#buyer-info').removeClass('opacity-half');
             $('.buyer-info').prop('disabled', false);
         }
     };
