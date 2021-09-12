@@ -2,6 +2,7 @@
     <head>
         <meta charset="<?php bloginfo('charset'); ?>"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="icon" href="<?php bloginfo('template_directory'); ?>/assets/img/icon.ico" type="image/x-icon" />
         <title>KiPay Crypto Trading</title>
         <?php wp_head();?>
     </head>
