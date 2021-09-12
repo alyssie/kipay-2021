@@ -28,14 +28,14 @@ $fee = 500;
                             </div>
                             <p class="uppercase t-xs light ls-2">Current Price</p>
                             <p class="price t-xl bold">
-                                <span id="current-price" class="price t-xl bold"><?php echo number_format(floor(get_field('coin_price'))/100,2, '.', '') ?></span> PHP
+                                <span id="current-price" class="price t-xl bold"><?php echo number_format(get_field('coin_price'),2, '.', '') ?></span> PHP
                                 <a href="<?php the_field('coin_gecko_link') ?>" class="ml-2 btn mini-btn t-xs d-none d-lg-inline">Compare on CoinGecko</a>
                             </p>
                             <p class="available t-sm ellipsis light ls-2">
                                 Order limit: 
-                                <span class="t-sm"><?php echo number_format(floor($min / get_field('coin_price'))/100,2, '.', '') ?></span>
+                                <span class="t-sm"><?php echo number_format($min / get_field('coin_price'), 2, '.', '') ?></span>
                                 <?php the_field('coin_symbol') ?> - 
-                                <span class="t-sm"><?php echo number_format(floor($max / get_field('coin_price'))/100,2, '.', '') ?></span>
+                                <span class="t-sm"><?php echo number_format($max / get_field('coin_price'),2, '.', '') ?></span>
                                 <?php the_field('coin_symbol') ?>
                             </p>
                         </div>
@@ -58,9 +58,9 @@ $fee = 500;
                             <div class="col-12 mb-2">
                                 <p class="coin-order-limit d-none err uppercase t-sm semibold ls-1 mb-2">
                                     Limit: 
-                                    <span id="min-checkout" class="t-sm"><?php echo number_format(floor($min / get_field('coin_price'))/100,2, '.', '') ?></span>
+                                    <span class="t-sm"><?php echo number_format($min / get_field('coin_price'), 2, '.', '') ?></span>
                                     <?php the_field('coin_symbol') ?> - 
-                                    <span id="max-checkout" class="t-sm"><?php echo number_format(floor($max / get_field('coin_price'))/100,2, '.', '') ?></span>
+                                    <span class="t-sm"><?php echo number_format($max / get_field('coin_price'),2, '.', '') ?></span>
                                     <?php the_field('coin_symbol') ?>
                                 </p>
                                 <div class="relative">
@@ -68,7 +68,7 @@ $fee = 500;
                                     <input type="text" onPaste="return false"
                                         id="order-qty" class="lg-input w-100 text-center my-1" 
                                         placeholder="Amount (<?php the_field('coin_symbol'); ?>)"
-                                        value="<?php echo number_format(floor($min / get_field('coin_price'))/100,2, '.', '') ?>"
+                                        value="<?php echo number_format($min / get_field('coin_price'),2, '.', '') ?>"
                                     />
                                 </div>
                                 <div class="relative">
