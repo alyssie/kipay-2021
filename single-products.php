@@ -28,7 +28,7 @@ $fee = 500;
                             </div>
                             <p class="uppercase t-xs light ls-2">Current Price</p>
                             <p class="price t-xl bold">
-                                <span id="current-price" class="price t-xl bold"><?php the_field('coin_price') ?></span> PHP
+                                <span id="current-price" class="price t-xl bold"><?php echo number_format(floor(get_field('coin_price'))/100,2, '.', '') ?></span> PHP
                                 <a href="<?php the_field('coin_gecko_link') ?>" class="ml-2 btn mini-btn t-xs d-none d-lg-inline">Compare on CoinGecko</a>
                             </p>
                             <p class="available t-sm ellipsis light ls-2">
