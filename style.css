@@ -224,6 +224,10 @@ a:hover {
   box-shadow: 0 0 0 0 #ceff96;
 }
 
+button:focus {
+  outline: 0;
+}
+
 nav .logo {
   height: 45px;
 }
@@ -232,9 +236,23 @@ nav.bg {
   background: #0c0b0e !important;
 }
 
+.navbar-collapse {
+  align-items: center;
+  display: block;
+  text-align: center;
+}
+
 .nav-link {
   text-transform: uppercase;
   font-weight: 600;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: #ff66cb;
 }
 
 .coin-block {
@@ -294,6 +312,11 @@ nav.bg {
 
 #home-page .information {
   position: relative;
+}
+
+#home-page .information .roadmap {
+  background: #ffffff1a;
+  border-radius: 8px;
 }
 
 #home-page .information .roadmap .progress-line {

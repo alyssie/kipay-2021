@@ -54,7 +54,7 @@ get_header();
         <div class="container">
             <div class="row py-4">
                 <div class="col-12 col-lg-12 my-auto">
-                    <div class="roadmap py-0 py-md-5">
+                    <div class="roadmap px-4 py-5">
                         <h2 class="t-xl bold text-center uppercase">2021 Road Map</h2>
                         <p class="t-sm ls-1 light mb-3">Our inbox is always open for any suggestions.</p>
                         <div class="row text-center relative">
@@ -93,18 +93,18 @@ get_header();
         </div>
     </section>
     <section class="transactions py-3 py-lg-5">
-        <div class="container py-0 py-md-5">
+        <div class="container py-4 py-md-5">
             <div class="row">
                 <div class="col-12 col-xl-4 my-auto">
-                    <h2 class="t-xxl lh-2 bold uppercase text-center text-xl-right">Latest<br>Transactions</h2>
+                    <h2 class="t-xx lh-2 bold mb-4 mb-xl-0 uppercase text-center text-xl-right">Latest<br>Transactions</h2>
                 </div>
                 <div class="col-12 col-xl-8">
                     <div class="transaction-table">
                         <div class="row thead">
-                            <div class="col-4">
+                            <div class="col-8 col-md-4">
                                 <p>Contract Address</p>
                             </div>
-                            <div class="col-4">
+                            <div class="col-4 d-none d-md-block">
                                 <p>Description</p>
                             </div>
                             <div class="col-4">
@@ -116,10 +116,10 @@ get_header();
                             if ( $latesttrans->have_posts() ) :
                                 while ( $latesttrans->have_posts() ) : $latesttrans->the_post(); ?>
                                     <div class="row tbody">
-                                        <div class="col-4">
+                                        <div class="col-8 col-md-4">
                                             <p><?php echo stringToSecret(get_field('contract_address')); ?></p>
                                         </div>
-                                        <div class="col-4">
+                                        <div class="col-4 d-none d-md-block">
                                             <p><?php the_field('coin_qty'); ?> <?php the_field('coin_symbol'); ?></p>
                                         </div>
                                         <div class="col-4">
